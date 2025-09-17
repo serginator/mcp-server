@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mcp-local-server": {
+      "command": "/Users/sergio.ruiz/projects/work/mcp-server/run-docker-mcp.sh",
+      "args": [],
+      "env": {}
+    }
+  }
+}

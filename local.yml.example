@@ -1,0 +1,9 @@
+# Example local configuration file
+# Copy this file to local.yml and add your actual tokens
+# local.yml is ignored by git and will override config.yml values
+
+notion_token: "your_notion_token_here"
+github_token: "your_github_token_here"
+jira_token: "your_jira_token_here"
+jira_url: "https://your-company.atlassian.net/"
+jira_username: "your.email@company.com"

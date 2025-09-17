@@ -1,0 +1,7 @@
+# Default configuration values
+# These can be overridden by local.yml or environment variables
+notion_token: "<notion_token>"
+github_token: "<github_token>"
+jira_token: "<jira_token>"
+jira_url: "<jira_url>"
+jira_username: "<jira_username>"
