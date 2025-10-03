@@ -1,35 +1,48 @@
 # MCP Integration Server
 
-A Model Context Protocol (MCP) server that provides essential tools for GitHub, Jira and Notion integrations. This server implements 20 carefully selected tools to stay within model limits while providing maximum utility.
+Curated MCP server that explores GitHub, Jira, and Notion tooling while staying comfortably under the 80-tool guidance for editor integrations such as Cursor.
 
-## Features
+## Tooling Overview
 
-### GitHub Tools (10 tools)
+### GitHub Tools (21)
 
-- `github_get_pull_request` - Get details of a specific pull request
-- `github_create_issue` - Create a new issue in a repository
-- `github_create_pull_request` - Create a new pull request
-- `github_get_issue` - Get details of a specific issue
-- `github_list_branches` - List all branches in a repository
-- `github_list_commits` - List commits in a repository
-- `github_search_repositories` - Search for repositories
-- `github_search_issues` - Search for issues across repositories
-- `github_get_workflows` - Get workflows for a repository
-- `github_run_workflow` - Trigger a workflow run
+- `github_get_pull_request` – Get details of a specific pull request
+- `github_get_pull_request_diff` – Fetch a pull request diff in unified format
+- `github_create_issue` – Create a new issue in a repository
+- `github_create_pull_request` – Create a new pull request
+- `github_get_issue` – Get details of a specific issue
+- `github_list_branches` – List all branches in a repository
+- `github_list_commits` – List commits in a repository
+- `github_search_repositories` – Search for repositories
+- `github_search_issues` – Search for issues across repositories
+- `github_get_workflows` – List GitHub Actions workflows
+- `github_run_workflow` – Trigger a workflow run by file name
+- `github_add_comment` – Add a comment to an issue or pull request
+- `github_get_comments` – Retrieve comments from an issue or pull request
+- `github_assign_copilot` – Assign users to an issue or pull request
+- `github_create_branch` – Create a new branch from a commit SHA
+- `github_create_repository` – Create a repository in the authenticated account
+- `github_get_commit` – Get details for a specific commit
+- `github_get_release_by_tag` – Retrieve release information by tag name
+- `github_get_tag` – Look up tag metadata and commit
+- `github_search_code` – Search for code results across repositories
+- `github_search_pull_requests` – Search for pull requests
 
-### Jira Tools (3 tools)
+### Jira Tools (3)
 
-- `jira_get_ticket` - Get details of a Jira ticket
-- `jira_search_tickets` - Search for Jira tickets using JQL
-- `jira_create_ticket` - Create a new Jira ticket
+- `jira_get_ticket` – Get details of a Jira ticket
+- `jira_search_tickets` – Search for Jira tickets using JQL
+- `jira_create_ticket` – Create a new Jira ticket as a task
 
-### Notion Tools (5 tools)
+### Notion Tools (7)
 
-- `notion_search_pages` - Search for Notion pages by title
-- `notion_get_page` - Get a Notion page by URL
-- `notion_get_database` - Get a Notion database by ID
-- `notion_create_page` - Create a new Notion page
-- `notion_create_database` - Create a new Notion database
+- `notion_search_pages` – Search for Notion pages by title
+- `notion_get_page` – Get a Notion page by URL
+- `notion_get_database` – Get a Notion database by ID
+- `notion_create_page` – Create a new Notion page under a parent page
+- `notion_create_database` – Create a new Notion database under a parent page
+- `notion_update_page` – Update metadata for an existing page
+- `notion_update_database` – Update the title for an existing database
 
 ## Configuration
 
@@ -109,7 +122,7 @@ Configure your AI client to connect to this server using the MCP protocol over s
 {
   "mcpServers": {
     "mcp-local-server": {
-      "command": "<your-path>/mcp-server>/run-docker-mcp.sh",
+      "command": "<your-path>/mcp-server/run-docker-mcp.sh",
       "args": [],
       "env": {}
     }
